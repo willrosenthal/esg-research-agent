@@ -1,0 +1,80 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.text-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.header-image {
+    width: 384px; /* Maintain the actual image dimensions */
+    height: auto;
+    margin-left: auto;
+    margin-right: 20%;
+}
+
+@media (max-width: 1024px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-image {
+        width: 80%;
+        margin-top: 20px;
+        margin-right: 0;
+    }
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin: 10px 0;
+    width: 300px;
+    border: 2px solid #ddd;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#questions i, #searchForm i, #researchingIndicator i {
+    margin-right: 5px;
+}
+
+#results {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

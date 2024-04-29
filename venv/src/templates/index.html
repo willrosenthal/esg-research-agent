@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Research Agent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="header-content">
+        <div class="text-content">
+            <h1><i class="fas fa-search"></i> ESG Research Agent</h1>
+            <div id="questions" style="color: #666;">
+                <h2><i class="fas fa-info-circle"></i> Explore ESG Factors</h2>
+                <p><i class="fas fa-angle-right"></i> Does the company have a human rights policy?</p>
+                <p><i class="fas fa-angle-right"></i> Does the company provide human rights or ESG training to employees?</p>
+                <p><i class="fas fa-angle-right"></i> Does the company track Scope 1 emissions?</p>
+            </div>
+        </div>
+        <img src="/static/esger.webp" alt="ESG Image" class="header-image">
+    </div>
+
+    <form id="searchForm" onsubmit="submitQuery(); return false;">
+        <input type="text" id="companyName" placeholder="Enter Company Name" aria-label="Company Name">
+        <button type="submit" id="submitButton"><i class="fas fa-search"></i> Search</button>
+    </form>
+    
+    <div id="researchingIndicator" style="display:none;">
+        <i class="fas fa-spinner fa-spin"></i> <span id="researchingDots">Researching.</span>
+    </div>
+
+    <div id="results" style="display:none;">
+        <h2>Results</h2>
+        <p><strong>Human Rights Policy:</strong> <span id="humanRightsPolicy"></span></p>
+        <p><strong>ESG Training:</strong> <span id="esgTraining"></span></p>
+        <p><strong>Scope 1 Emissions:</strong> <span id="scope1Emissions"></span></p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
